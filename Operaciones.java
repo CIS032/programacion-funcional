@@ -12,12 +12,12 @@ public class Operaciones {
     public static void main(String[] args) {
         List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8);
         numeros.stream().forEach(n -> System.out.printf("%d ",n));
-        List<Integer> impares = numeros.stream()
+        List<Integer> pares = numeros.stream()
                                        .filter(n -> {
                                            return n % 2 == 0;
                                         })
                                         .collect(Collectors.toList());
-        System.out.printf("%nImpares: %s%n",impares);
+        System.out.printf("%nPares: %s%n",impares);
         List<Integer> cuadrados = numeros.stream()
                                .map(n -> {
                                     return n * n;
